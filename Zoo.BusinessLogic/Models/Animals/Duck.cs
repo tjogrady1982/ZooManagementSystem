@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zoo.BusinessLogic.Models.Animals;
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-    public class GuineaFowl : Animal, ICanLayEggs, IProduceMuck
+    public class Duck: Animal, ICanLayEggs, IProduceMuck
     {
-        public GuineaFowl(DateTime dateOfBirth) : base(dateOfBirth)
+        public Duck(DateTime dateOfBirth) : base(dateOfBirth)
         {
         }
         public void MuckOut()
@@ -20,5 +19,6 @@ namespace Zoo.BusinessLogic.Models.Animals
         {
 
         }
+
     }
 }

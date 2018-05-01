@@ -38,5 +38,14 @@ namespace Zoo.BusinessLogic.Models.Animals
     {
       return $"{GetType().Name}, last fed {lastFed}";
     }
-  }
+
+      //public interface ICanLayEggs
+      //{
+      //    void CheckForEggs();
+      //}
+      //public interface ICanProduceMuck
+      //{
+      //    void MuckOut();
+      //}
+    }
 }

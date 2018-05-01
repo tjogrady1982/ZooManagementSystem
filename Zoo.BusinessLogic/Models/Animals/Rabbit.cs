@@ -2,7 +2,7 @@
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-  public class Rabbit : AnimalThatCanBeGroomed
+  public class Rabbit : AnimalThatCanBeGroomed, IProduceMuck
   {
     public Rabbit(DateTime dateOfBirth) : base(dateOfBirth)
     {
@@ -12,5 +12,12 @@ namespace Zoo.BusinessLogic.Models.Animals
       Console.WriteLine("<Munch, munch>");
       base.Feed();
     }
-  }
+
+        public void MuckOut()
+        {
+            //throw new NotImplementedException();
+        }
+
+     
+    }
 }

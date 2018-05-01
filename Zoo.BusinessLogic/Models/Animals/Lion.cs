@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-  public class Lion : Animal
+  public class Lion : Animal, IProduceMuck
   {
     public Lion(DateTime dateOfBirth) : base(dateOfBirth)
     {
     }
+
+      public void MuckOut()
+      {
+         
+      }
   }
 }
