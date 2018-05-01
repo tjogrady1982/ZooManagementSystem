@@ -13,11 +13,17 @@ namespace Zoo.BusinessLogic.Models.Animals
       base.Feed();
     }
 
-        public void MuckOut()
-        {
-            //throw new NotImplementedException();
-        }
+      private DateTime lastMuckedOut;
+      public void MuckOut()
+      {
+          lastMuckedOut = DateTime.Now;
+      }
 
-     
+      public override string ToString()
+      {
+          return base.ToString() + $"; Last Mucked Out {lastMuckedOut}";
+      }
+
+
     }
 }

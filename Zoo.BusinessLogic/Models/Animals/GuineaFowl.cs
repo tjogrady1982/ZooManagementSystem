@@ -7,18 +7,23 @@ using Zoo.BusinessLogic.Models.Animals;
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-    public class GuineaFowl : Animal, ICanLayEggs, IProduceMuck
+    public class GuineaFowl : Animal, IProduceMuck
     {
         public GuineaFowl(DateTime dateOfBirth) : base(dateOfBirth)
         {
         }
+        private DateTime lastMuckedOut;
         public void MuckOut()
         {
+            lastMuckedOut = DateTime.Now;
         }
 
-        public void CheckForEggs()
+        public override string ToString()
         {
-
+            return base.ToString() + $"; Last Mucked Out {lastMuckedOut}";
         }
+
+       
+       
     }
 }

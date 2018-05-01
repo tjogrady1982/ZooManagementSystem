@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-  public interface IProduceMuck
-  {
-    void MuckOut();
-  }
+
+
+    public interface IProduceMuck
+    {
+        void MuckOut();
+    }
+
 }

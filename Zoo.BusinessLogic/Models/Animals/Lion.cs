@@ -11,10 +11,15 @@ namespace Zoo.BusinessLogic.Models.Animals
     public Lion(DateTime dateOfBirth) : base(dateOfBirth)
     {
     }
-
-      public void MuckOut()
+      private DateTime lastMuckedOut;
+        public void MuckOut()
       {
-         
+          lastMuckedOut = DateTime.Now;
+        }
+
+      public override string ToString()
+      {
+          return base.ToString() + $"; Last Mucked Out {lastMuckedOut}";
       }
-  }
+    }
 }

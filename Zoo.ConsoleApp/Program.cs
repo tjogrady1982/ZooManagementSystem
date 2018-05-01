@@ -22,6 +22,8 @@ namespace Zoo.ConsoleApp
       var otherAnimals = new Animal[] {
         new Rabbit(new DateTime(2014, 1, 1)),
         new Zebra(new DateTime(2008, 12, 1)),
+          new Ant(new DateTime(2012,8,8)),
+          new Duck(new DateTime(2012,8,8)),
                   new GuineaFowl(new DateTime(2012,8,8)) 
       };
       var animals = lions.Union<Animal>(otherAnimals).ToList();
@@ -32,16 +34,21 @@ namespace Zoo.ConsoleApp
         new Keeper(otherAnimals) 
       };
 
-      var feedingScheduler = FeedingScheduler.Instance;
-      var groomingScheduler = GroomingScheduler.Instance;
+      //var feedingScheduler = FeedingScheduler.Instance;
+      //var groomingScheduler = GroomingScheduler.Instance;
+        var jobScheduler = JobScheduler.Instance;
 
       while (true)
       {
         Console.WriteLine("Feeding the animals...");
-        feedingScheduler.AssignFeedingJobs(keepers, animals);
+        
 
         Console.WriteLine("Grooming the animals...");
-        groomingScheduler.AssignGroomingJobs(keepers, animals);
+
+          Console.WriteLine("Mucking Out the animals...");
+        
+
+          jobScheduler.AssignJobs(keepers, animals);
 
         Console.WriteLine("Done. Results:");
 
