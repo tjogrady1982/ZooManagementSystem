@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-    public class GuineaFowl : Animal
+    class GuineaFowl
     {
-        public GuineaFowl(DateTime dateOfBirth) : base(dateOfBirth)
-        {
-        }
     }
 }
